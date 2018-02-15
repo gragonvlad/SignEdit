@@ -12,7 +12,7 @@ class Language
 	function initData()
 	{
 		$this->jpn = parse_ini_file("jpn.ini");
-		//$this->eng = parse_ini_file("eng.ini");
+		$this->eng = parse_ini_file("eng.ini");
 		self::$instance = $this;
 	}
 

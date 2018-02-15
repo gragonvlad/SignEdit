@@ -22,6 +22,7 @@ class EventListener implements Listener
 	{
 		$this->owner = $owner;
 		$this->api = $this->owner->getAPI();
+		$this->lang = $this->owner->getLanguage();
 	}
 
 
@@ -69,7 +70,7 @@ class EventListener implements Listener
 
 				if ((int)$data == 2) {
 					if (empty($player->signedit["copydatas"])) {
-						$player->sendMessage("§c> ".Language::get("message.paste.error", "jpn"));
+						$player->sendMessage("§c> ".Language::get("message.paste.error", $this->lang));
 						return;
 					}
 					$this->getApi()->requestUI(API::FORM_TYPE_PASTE, $player);
@@ -83,7 +84,7 @@ class EventListener implements Listener
 
 				if ((int)$data == 4) {
 					if (empty($player->signedit["copydatas"])) {
-						$player->sendMessage("§c> ".Language::get("message.paste.error", "jpn"));
+						$player->sendMessage("§c> ".Language::get("message.paste.error", $this->lang));
 						return;
 					}
 					$this->getApi()->requestUI(API::FORM_TYPE_DELPASTE, $player);
@@ -105,7 +106,7 @@ class EventListener implements Listener
 					$sign->setLine($key, $text);
 				}
 				$sign->saveNBT();
-				$player->sendMessage("§a> ".Language::get("message.edit.completed", "jpn"));
+				$player->sendMessage("§a> ".Language::get("message.edit.completed", $this->lang));
 				break;
 
 
@@ -123,7 +124,7 @@ class EventListener implements Listener
 					return;
 				}
 				$player->signedit["copydatas"][$title] = $sign->getText();
-				$player->sendMessage("§a> ".Language::get("message.copy.completed", "jpn"));
+				$player->sendMessage("§a> ".Language::get("message.copy.completed", $this->lang));
 				break;
 
 
@@ -139,7 +140,7 @@ class EventListener implements Listener
 				$texts = $player->signedit["copydatas"][$key];
 				$sign->setText($texts[0], $texts[1], $texts[2], $texts[3]);
 				$sign->saveNBT();
-				$player->sendMessage("§a> ".Language::get("message.paste.completed", "jpn"));
+				$player->sendMessage("§a> ".Language::get("message.paste.completed", $this->lang));
 				break;
 
 
@@ -152,9 +153,9 @@ class EventListener implements Listener
 					$sign = $player->signedit["object"];
 					$sign->setText("", "", "", "");
 					$sign->saveNBT();
-					$player->sendMessage("§a> ".Language::get("message.clear.completed", "jpn"));
+					$player->sendMessage("§a> ".Language::get("message.clear.completed", $this->lang));
 				} else {
-					$player->sendMessage("§b> ".Language::get("message.clear.avoided", "jpn"));
+					$player->sendMessage("§b> ".Language::get("message.clear.avoided", $this->lang));
 				}
 				break;
 
@@ -167,7 +168,7 @@ class EventListener implements Listener
 
 				$key = array_keys($player->signedit["copydatas"])[$data];
 				unset($player->signedit["copydatas"][$key]);
-				$player->sendMessage("§a> ".Language::get("message.copy.remove", "jpn"));
+				$player->sendMessage("§a> ".Language::get("message.copy.remove", $this->lang));
 				break;
 		}
 	}
