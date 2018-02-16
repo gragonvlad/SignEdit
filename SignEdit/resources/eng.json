@@ -1,0 +1,42 @@
+{
+	"language-name": "English",
+	"language-selected": "Now selected English.",
+
+	"message-edit-completed": "Editing of the sign is completed.",
+	"message-copy-completed": "Copy of the sign is completed.",
+	"message-copy-remove": "Deleted the selected copy data.",
+	"message-paste-completed": "Pasting is completed.",
+	"message-paste-error": "You have not made any copies.",
+	"message-clear-completed": "Erased the letters written at the sign.",
+	"message-clear-avoided": "Processing was interrupted.",
+
+	"form-select-title": "SignEdit",
+	"form-select-content": "Please select type...",
+	"form-select-button-edit": "Edit sign letter",
+	"form-select-button-copy": "Copy the sign",
+	"form-select-button-paste": "Paste a letters",
+	"form-select-button-clear": "Erase all letters",
+	"form-select-button-remove": "Remove saving data",
+
+	"form-edit-title": "SignEdit > Edit",
+	"form-edit-line0": "Line1:",
+	"form-edit-line1": "Line2:",
+	"form-edit-line2": "Line3:",
+	"form-edit-line3": "Line4:",
+
+	"form-copy-title": "SignEdit > Copy",
+	"form-copy-input-text": "You will copy the sign.%nPlease input a title of the sign.",
+	"form-copy-input-placeholder": "Keyword",
+	"form-copy-label-text": "The title has been used. Please input another one",
+
+	"form-paste-title": "SignEdit > Paste",
+	"form-paste-content": "Please select",
+
+	"form-remove-title": "SignEdit > Remove a data",
+	"form-remove-content": "Please select a data of copied.",
+
+	"form-clear-title": "SignEdit > Erase a letters",
+	"form-clear-content": "Do you really want to make it blank?",
+	"form-clear-button1": "Yes",
+	"form-clear-button2": "No"
+}

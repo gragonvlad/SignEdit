@@ -22,7 +22,6 @@ class EventListener implements Listener
 	{
 		$this->owner = $owner;
 		$this->api = $this->owner->getAPI();
-		$this->lang = $this->owner->getLanguage();
 	}
 
 
@@ -39,7 +38,7 @@ class EventListener implements Listener
 				if (!isset($player->signedit["copydatas"])) {
 					$player->signedit["copydatas"] = [];
 				}
-				$this->getApi()->requestUI(API::FORM_TYPE_SELECT, $player);
+				$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 			}
 		}
 	}
@@ -59,35 +58,35 @@ class EventListener implements Listener
 				if ($pk->formData == "null\n") return;
 
 				if ((int)$data == 0) {
-					$this->getApi()->requestUI(API::FORM_TYPE_EDIT, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_EDIT, $player);
 					return;
 				}
 
 				if ((int)$data == 1) {
-					$this->getApi()->requestUI(API::FORM_TYPE_COPY, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_COPY, $player);
 					return;
 				}
 
 				if ((int)$data == 2) {
 					if (empty($player->signedit["copydatas"])) {
-						$player->sendMessage("§c> ".Language::get("message.paste.error", $this->lang));
+						$player->sendMessage("§c> ".Language::translate("message-paste-error"));
 						return;
 					}
-					$this->getApi()->requestUI(API::FORM_TYPE_PASTE, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_PASTE, $player);
 					return;
 				}
 
 				if ((int)$data == 3) {
-					$this->getApi()->requestUI(API::FORM_TYPE_INITIAL, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_INITIAL, $player);
 					return;
 				}
 
 				if ((int)$data == 4) {
 					if (empty($player->signedit["copydatas"])) {
-						$player->sendMessage("§c> ".Language::get("message.paste.error", $this->lang));
+						$player->sendMessage("§c> ".Language::translate("message-paste-error"));
 						return;
 					}
-					$this->getApi()->requestUI(API::FORM_TYPE_DELPASTE, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_DELPASTE, $player);
 					return;
 				}
 				break;
@@ -95,7 +94,7 @@ class EventListener implements Listener
 
 			case API::FORM_TYPE_EDIT:
 				if ($pk->formData == "null\n") {
-					$this->getApi()->requestUI(API::FORM_TYPE_SELECT, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 					return;
 				}
 				if (!is_array($data)) {
@@ -106,69 +105,68 @@ class EventListener implements Listener
 					$sign->setLine($key, $text);
 				}
 				$sign->saveNBT();
-				$player->sendMessage("§a> ".Language::get("message.edit.completed", $this->lang));
+				$player->sendMessage("§a> ".Language::translate("message-edit-completed"));
 				break;
 
 
 			case API::FORM_TYPE_COPY:
 			case API::FORM_TYPE_COPY_ERROR:
 				if ($pk->formData == "null\n") {
-					$this->getApi()->requestUI(API::FORM_TYPE_SELECT, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 					return;
 				}
 				if ($data[0] === null) return;
 				$sign = $player->signedit["object"];
 				$title = $data[0];
 				if (isset($player->signedit["copydatas"][$title])) {
-					$this->getApi()->requestUI(API::FORM_TYPE_COPY_ERROR, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_COPY_ERROR, $player);
 					return;
 				}
 				$player->signedit["copydatas"][$title] = $sign->getText();
-				$player->sendMessage("§a> ".Language::get("message.copy.completed", $this->lang));
+				$player->sendMessage("§a> ".Language::translate("message-copy-completed"));
 				break;
 
 
 			case API::FORM_TYPE_PASTE:
 				if ($pk->formData == "null\n") {
-					$this->getApi()->requestUI(API::FORM_TYPE_SELECT, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 					return;
 				}
 				if (!isset($player->signedit["copydatas"])) return;
 				$sign = $player->signedit["object"];
-				//$texts = array_slice($player->signedit["copydatas"], $data, 1);
 				$key = array_keys($player->signedit["copydatas"])[$data];
 				$texts = $player->signedit["copydatas"][$key];
 				$sign->setText($texts[0], $texts[1], $texts[2], $texts[3]);
 				$sign->saveNBT();
-				$player->sendMessage("§a> ".Language::get("message.paste.completed", $this->lang));
+				$player->sendMessage("§a> ".Language::translate("message-paste-completed"));
 				break;
 
 
 			case API::FORM_TYPE_INITIAL:
 				if ($pk->formData == "null\n") {
-					$this->getApi()->requestUI(API::FORM_TYPE_SELECT, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 					return;
 				}
 				if ($data) {
 					$sign = $player->signedit["object"];
 					$sign->setText("", "", "", "");
 					$sign->saveNBT();
-					$player->sendMessage("§a> ".Language::get("message.clear.completed", $this->lang));
+					$player->sendMessage("§a> ".Language::translate("message-clear-completed"));
 				} else {
-					$player->sendMessage("§b> ".Language::get("message.clear.avoided", $this->lang));
+					$player->sendMessage("§b> ".Language::translate("message-clear-avoided"));
 				}
 				break;
 
 
 			case API::FORM_TYPE_DELPASTE:
 				if ($pk->formData == "null\n") {
-					$this->getApi()->requestUI(API::FORM_TYPE_SELECT, $player);
+					$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 					return;
 				}
 
 				$key = array_keys($player->signedit["copydatas"])[$data];
 				unset($player->signedit["copydatas"][$key]);
-				$player->sendMessage("§a> ".Language::get("message.copy.remove", $this->lang));
+				$player->sendMessage("§a> ".Language::translate("message-copy-remove"));
 				break;
 		}
 	}
@@ -186,7 +184,7 @@ class EventListener implements Listener
 	}
 
 
-	public function getApi()
+	public function getAPI()
 	{
 		return $this->api;
 	}

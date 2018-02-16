@@ -7,18 +7,17 @@ class Language
 
 	public static $instance;
 
-	function __construct(){}
-
-	function initData()
+	public function __construct($owner, $langjson)
 	{
-		$this->jpn = parse_ini_file("jpn.ini");
-		$this->eng = parse_ini_file("eng.ini");
+		$this->owner = $owner;
+		$this->trans = $langjson;
 		self::$instance = $this;
 	}
 
-	static function get($key, $lang)
+
+	static function translate($key)
 	{
-		$txt = self::$instance->$lang[$key];
+		$txt = self::$instance->trans[$key];
 		if (strpos($txt, "%n") != false) {
 			$text = str_replace("%n", "\n", $txt);
 		} else {
