@@ -39,7 +39,7 @@ class Main extends PluginBase
 
     public function loadLanguage()
     {
-        echo $languageCode = $this->config->get("language");
+        $languageCode = $this->config->get("language");
         $resources = $this->getResources();
         foreach ($resources as $resource) {
             if ($resource->getFilename() === "eng.json") {
