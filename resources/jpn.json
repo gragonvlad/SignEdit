@@ -1,0 +1,42 @@
+{
+	"language-name": "日本語",
+	"language-selected": "{%0}を現在選択しています",
+
+	"message-edit-completed": "看板の編集が完了しました",
+	"message-copy-completed": "看板のコピーが完了しました",
+	"message-copy-remove": "指定した看板のコピーデータを消しました",
+	"message-paste-completed": "貼りつけが完了しました",
+	"message-paste-error": "看板のコピーが一つもされていません",
+	"message-clear-completed": "看板の白紙化が完了しました",
+	"message-clear-avoided": "看板の白紙化を中断しました",
+
+	"form-select-title": "SignEdit",
+	"form-select-content": "行いたい処理を指定してください",
+	"form-select-button-edit": "看板の文字を編集します",
+	"form-select-button-copy": "看板のコピーを行います",
+	"form-select-button-paste": "看板にペーストを行います",
+	"form-select-button-clear": "看板を白紙化します",
+	"form-select-button-remove": "保管データを削除します",
+
+	"form-edit-title": "SignEdit > 編集",
+	"form-edit-line0": "1行目:",
+	"form-edit-line1": "2行目:",
+	"form-edit-line2": "3行目:",
+	"form-edit-line3": "4行目:",
+
+	"form-copy-title": "SignEdit > コピー",
+	"form-copy-input-text": "その看板の文字をコピーします%n任意の題名で保存してください",
+	"form-copy-input-placeholder": "わかりやすいキーワード",
+	"form-copy-label-text": "その題名はすでに使われています。違うものに変えてください",
+
+	"form-paste-title": "SignEdit > 貼り付け",
+	"form-paste-content": "貼り付ける文字を選んでください",
+
+	"form-remove-title": "SignEdit > 保管データ削除",
+	"form-remove-content": "削除する文字を選んでください",
+
+	"form-clear-title": "SignEdit > 白紙化",
+	"form-clear-content": "本当に白紙化しますか？",
+	"form-clear-button1": "はい",
+	"form-clear-button2": "いいえ"
+}
