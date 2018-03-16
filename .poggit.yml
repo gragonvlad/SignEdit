@@ -3,6 +3,6 @@ branches:
 - master
 projects:
   SignEdit:
-    path: SignEdit/
-    icon: utils/icon.png
+    path: ""
+    icon: /utils/icon.png
 ...
