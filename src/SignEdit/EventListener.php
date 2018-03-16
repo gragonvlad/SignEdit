@@ -7,16 +7,16 @@ use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\item\Item;
-use pocketmine\block\SignPost;
-use pocketmine\block\WallSign;
 use pocketmine\tile\Sign;
-use pocketmine\item\Feather;
 
 use SignEdit\utils\API;
 use SignEdit\lang\Language;
 
 class EventListener implements Listener
 {
+
+	const ITEM_FEATHER = 288;
+	const BLOCK_SIGN = [ 63, 68, 323 ];
 
 	public function __construct($owner)
 	{
@@ -30,8 +30,9 @@ class EventListener implements Listener
 		$player = $event->getPlayer();
 		$item = $event->getItem();
 		$block = $event->getBlock();
-		if ($item instanceof Feather) {
-			if ($block instanceof SignPost || $block instanceof WallSign) {
+		if ($block->getId() == 0) return;
+		if ($item->getId() == self::ITEM_FEATHER) {
+			if (in_array($block->getId(), self::BLOCK_SIGN)) {
 				$tile = $player->getLevel()->getTile($block);
 				if (!($tile instanceof Sign)) return;
 				$player->signedit["object"] = $tile;

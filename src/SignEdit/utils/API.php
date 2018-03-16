@@ -8,13 +8,13 @@ use SignEdit\lang\Language;
 class API
 {
 
-	const FORM_TYPE_SELECT = 42347;
-	const FORM_TYPE_EDIT = 42348;
-	const FORM_TYPE_COPY = 42349;
-	const FORM_TYPE_PASTE = 42350;
-	const FORM_TYPE_INITIAL = 42351;
-	const FORM_TYPE_COPY_ERROR = 42352;
-	const FORM_TYPE_DELPASTE = 42353;
+	const FORM_TYPE_SELECT = 1947;
+	const FORM_TYPE_EDIT = 1948;
+	const FORM_TYPE_COPY = 1949;
+	const FORM_TYPE_PASTE = 1950;
+	const FORM_TYPE_INITIAL = 1951;
+	const FORM_TYPE_COPY_ERROR = 1952;
+	const FORM_TYPE_DELPASTE = 1953;
 
 	const FORM_IMAGE_EDIT = "https://i.imgur.com/QmA6UZR.png";
 	const FORM_IMAGE_PASTE = "https://i.imgur.com/hA4v71w.png";
