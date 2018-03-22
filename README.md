@@ -1,5 +1,5 @@
 # SignEdit
-[![img](http://drive.google.com/uc?export=view&id=0B2r-lPEWAHyJQW11WGJTLW8tS1U)]
+[img](http://drive.google.com/uc?export=view&id=0B2r-lPEWAHyJQW11WGJTLW8tS1U)
 Edit a sign for PocketMine-MP!!
 
 [![](https://poggit.pmmp.io/shield.state/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
