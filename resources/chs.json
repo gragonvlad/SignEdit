@@ -1,0 +1,42 @@
+{
+	"language-name": "Chinese",
+	"language-selected": "现在选择了中文",
+
+	"message-edit-completed": "木牌编辑完成了",
+	"message-copy-completed": "木牌复制完成了",
+	"message-copy-remove": "删除选中的拷贝数据",
+	"message-paste-completed": "木牌粘贴完成了",
+	"message-paste-error": "你还没有复制任何内容",
+	"message-clear-completed": "清除你在木牌上写的内容",
+	"message-clear-avoided": "处理被中断",
+
+	"form-select-title": "SignEdit木牌编辑",
+	"form-select-content": "请选择类型...",
+	"form-select-button-edit": "编辑木牌内容",
+	"form-select-button-copy": "复制木牌内容",
+	"form-select-button-paste": "粘贴木牌内容",
+	"form-select-button-clear": "清除木牌内容",
+	"form-select-button-remove": "删除选中的拷贝数据",
+
+	"form-edit-title": "木牌编辑 > 编辑",
+	"form-edit-line0": "第一行:",
+	"form-edit-line1": "第二行:",
+	"form-edit-line2": "第三行:",
+	"form-edit-line3": "第四行:",
+
+	"form-copy-title": "木牌编辑 > 复制",
+	"form-copy-input-text": "您将复制木牌内容。%n请起一个标题来保存它",
+	"form-copy-input-placeholder": "标题",
+	"form-copy-label-text": "这个标题已被使用，请换一个哟~",
+
+	"form-paste-title": "木牌编辑 > 粘贴",
+	"form-paste-content": "请选择",
+
+	"form-remove-title": "木牌编辑 > 删除拷贝数据",
+	"form-remove-content": "请选择一个拷贝数据",
+
+	"form-clear-title": "木牌编辑 > 清除木牌内容",
+	"form-clear-content": "你真的想清空它吗？",
+	"form-clear-button1": "是",
+	"form-clear-button2": "否"
+}
