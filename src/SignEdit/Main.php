@@ -20,11 +20,9 @@ class Main extends PluginBase
         $this->loadLanguage();
         $this->api = new API($this);
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        $this->getLogger()->info("§l§a────────────── §eSignEdit §a───────────────────");
-        $this->getLogger()->info("  §2author§r: OtorisanVardo");
-        $this->getLogger()->info("  §2contact§r: §bhttps://twitter.com/10ripon_obs ");
-        $this->getLogger()->info("  §2language§r: ".Language::translate("language-name"));
-        $this->getLogger()->info("§l§a───────────────────────────────────────────");
+        $this->getLogger()->info("author : OtorisanVardo");
+        $this->getLogger()->info("contact : §bhttps://twitter.com/10ripon_obs");
+        $this->getLogger()->info("language: ".Language::translate("language-name"));
     }
 
 
