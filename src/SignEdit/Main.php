@@ -21,8 +21,7 @@ class Main extends PluginBase
         $this->api = new API($this);
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->getLogger()->info("author : OtorisanVardo");
-        $this->getLogger()->info("contact : @
-        10ripon_obs");
+        $this->getLogger()->info("contact : @10ripon_obs");
         $this->getLogger()->info("language: ".Language::translate("language-name"));
     }
 
