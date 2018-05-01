@@ -1,0 +1,42 @@
+{
+	"language-name": "German",
+	"language-selected": "Now selected German.",
+
+	"message-edit-completed": "Editieren des Schildes abgeschlossen",
+	"message-copy-completed": "kopieren des Schildes ist abgeschlossen",
+	"message-copy-remove": "Der ausgewählte gespeicherte Text wurde gelöscht",
+	"message-paste-completed": "Das Einfügen ist abgeschlossen",
+	"message-paste-error": "Du hast noch keien Kopien gemacht",
+	"message-clear-completed": "Kompletter Text des Schildes gelöscht",
+	"message-clear-avoided": "Die Verarbeitung wurde unterbrochen",
+
+	"form-select-title": "SignEdit",
+	"form-select-content": "Bitte wähle eine Bearbeitungs möglichkeit",
+	"form-select-button-edit": "Text Ändern",
+	"form-select-button-copy": "Kopiere den Text",
+	"form-select-button-paste": "Text einügen",
+	"form-select-button-clear": "kompletten Text löschen",
+	"form-select-button-remove": "Speicher daten löschen",
+
+	"form-edit-title": "SignEdit > Editieren",
+	"form-edit-line0": "1. Zeile",
+	"form-edit-line1": "2. Zeile",
+	"form-edit-line2": "3. Zeile",
+	"form-edit-line3": "4. Zeile",
+
+	"form-copy-title": "SignEdit > kopieren",
+	"form-copy-input-text": "Schild Kopieren.%nBitte gib einen Titel für das Schild an",
+	"form-copy-input-placeholder": "Stichwort",
+	"form-copy-label-text": "Der Titel wurde verwendet. Bitte geben Sie einen anderen ein",
+
+	"form-paste-title": "SignEdit > einfügen",
+	"form-paste-content": "Bitte wähle einen text aus",
+
+	"form-remove-title": "SignEdit > Lösche einen Speicher stand",
+	"form-remove-content": "Bitte wähle einen gespeicherten Text aus",
+
+	"form-clear-title": "SignEdit > Ganzen Text löschen",
+	"form-clear-content": "Möchtest du wirklich den gesamten Text löschen?",
+	"form-clear-button1": "Yes",
+	"form-clear-button2": "No"
+}

@@ -1,7 +1,9 @@
 ﻿# please select a language.
-# 言語を選択してください
 
 # Japanese = jpn
 # English = eng
 # Chinese = chs
+# German = deu
+
+
 language: eng
