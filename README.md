@@ -40,3 +40,6 @@ If you can help me, please make and send me a json file of language by all means
 # Special Thanks
 * [WingLo](https://github.com/lowingly)  
   * Send this repository Chinese language file
+
+* [HGHD-Developer](https://github.com/HGHD-Developer)  
+  * Send this repository German language file
