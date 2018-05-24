@@ -4,7 +4,7 @@
 
 	"message-edit-completed": "告示牌編輯完成",
 	"message-copy-completed": "告示牌複製完成",
-	"message-copy-remove": 刪除選中的複製數據",
+	"message-copy-remove": "刪除選中的複製數據",
 	"message-paste-completed": "貼上告示牌完成",
 	"message-paste-error": "你沒有複制任何內容",
 	"message-clear-completed": "已刪除你在告示牌上寫的內容",
