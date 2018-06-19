@@ -1,6 +1,6 @@
 name: SignEdit
 main: SignEdit\Main
-version: 1.2.2
+version: 1.2.3
 api:
  - 3.0.0
  - 3.0.0-ALPHA11
