@@ -2,8 +2,9 @@
 
 # Japanese = jpn
 # English = eng
-# Chinese = chs
+# Chinese-Simplified = chs
 # German = deu
+# Chinese-Traditional = zho
 
 
 language: eng

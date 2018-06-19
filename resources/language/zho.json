@@ -1,0 +1,41 @@
+{
+	"language-name": "Chinese-Traditional",
+	"language-selected": "現在選擇了中文(繁體)",
+
+	"message-edit-completed": "告示牌編輯完成",
+	"message-copy-completed": "告示牌複製完成",
+	"message-copy-remove": "刪除選中的複製數據",
+	"message-paste-completed": "貼上告示牌完成",
+	"message-paste-error": "你沒有複制任何內容",
+	"message-clear-completed": "已刪除你在告示牌上寫的內容",
+	"message-clear-avoided": "處理被中斷",
+
+	"form-select-title": "SignEdit告示牌編輯器",
+	"form-select-content": "請選擇類型...",
+	"form-select-button-edit": "编辑告示牌上的内容",
+	"form-select-button-copy": "複製告示牌上的內容",
+	"form-select-button-paste": "貼上告示牌上的內容",
+	"form-select-button-clear": "刪除告示牌上的內容",
+	"form-select-button-remove": "刪除選中的複製數據",
+
+	"form-edit-title": "告示牌編輯 > 編輯",
+	"form-edit-line0": "第一行:",
+	"form-edit-line1": "第二行:",
+	"form-edit-line2": "第三行:",
+	"form-edit-line3": "第四行:",
+
+	"form-copy-title": "告示牌編輯 > 複製",
+	"form-copy-input-text": "您將複製告示牌上的內容。 %n請起一個標題來保存它",
+	"form-copy-input-placeholder": "標題",
+	"form-copy-label-text": "這個標題已被使用，請更換另一個標題",
+
+	"form-paste-title": "告示牌編輯 > 貼上",
+	"form-paste-content": "請選擇",
+
+	"form-remove-title": "告示牌編輯 > 刪除複製數據",
+	"form-remove-content": "請選擇一個複製數據",
+
+	"form-clear-title": "告示牌編輯 > 刪除告示牌上的內容",
+	"form-clear-content": "你真的想清空它嗎？",
+	"form-clear-button1": "是",
+	"form-clear-button2": "否"
