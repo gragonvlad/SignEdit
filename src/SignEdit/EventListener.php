@@ -4,6 +4,7 @@ namespace SignEdit;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\item\Item;
@@ -25,9 +26,22 @@ class EventListener implements Listener
 	}
 
 
+	public function onJoin(PlayerJoinEvent $event)
+	{
+		$player = $event->getPlayer();
+		$player->iTick = 0;
+	}
+
+
 	public function onTap(PlayerInteractEvent $event)
 	{
 		$player = $event->getPlayer();
+		$tick = $this->getServer()->getTick();
+        if ($tick - $player->iTick <= 3) {
+            $event->setCancelled();
+            return;
+        }
+        $player->iTick = $tick;
 		$item = $event->getItem();
 		$block = $event->getBlock();
 		if ($block->getId() == 0) return;
@@ -42,6 +56,7 @@ class EventListener implements Listener
 				$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 			}
 		}
+		unset($this->isDealing[$player]);
 	}
 
 
