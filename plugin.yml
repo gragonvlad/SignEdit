@@ -1,10 +1,12 @@
 name: SignEdit
 main: SignEdit\Main
-version: 1.2.3
+version: 1.2.4
 api:
  - 3.0.0
- - 3.0.0-ALPHA11
  - 3.0.0-ALPHA12
+ - 3.0.1
+ - 3.0.2
+ - 3.0.5
  - 4.0.0
 load: POSTWORLD
 author: OtorisanVardo
