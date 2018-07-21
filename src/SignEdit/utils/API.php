@@ -169,7 +169,7 @@ class API
 		$data["content"] = Language::translate("form-paste-content");
 
 		foreach ($player->signedit["copydatas"] as $keyword => $copyed) {
-			$panels["text"] = $keyword;
+			$panels["text"] = "$keyword";
 			$panels["image"]["type"] = "url";
 			$panels["image"]["data"] = "";
 			$data["buttons"][] = $panels;
@@ -189,7 +189,7 @@ class API
 		$data["content"] = Language::translate("form-remove-content");
 
 		foreach ($player->signedit["copydatas"] as $keyword => $copyed) {
-			$panels["text"] = $keyword;
+			$panels["text"] = "$keyword";
 			$panels["image"]["type"] = "url";
 			$panels["image"]["data"] = "";
 			$data["buttons"][] = $panels;
