@@ -1,0 +1,42 @@
+{
+	"language-name": "Portugues",
+	"language-selected": "Agora selecionado inglês.",
+
+	"message-edit-completed": "A edição do sinal é concluída.",
+	"message-copy-completed": "Copia do sinal é concluída.",
+	"message-copy-remove": "Excluiu os dados de copia selecionados.",
+	"message-paste-completed": "Colar e concluido.",
+	"message-paste-error": "Você não fez nenhuma copia.",
+	"message-clear-completed": "Apagou as letras escritas na placa.",
+	"message-clear-avoided": "O processamento foi interrompido.",
+
+	"form-select-title": "SignEdit",
+	"form-select-content": "Por favor, selecione o tipo ...",
+	"form-select-button-edit": "Editar escrita da placa",
+	"form-select-button-copy": "Copiar placa",
+	"form-select-button-paste": "Colar texto",
+	"form-select-button-clear": "Apagar todos todos textos",
+	"form-select-button-remove": "Remover dados salvos",
+
+	"form-edit-title": "SignEdit > Editar",
+	"form-edit-line0": "Linha1:",
+	"form-edit-line1": "Linha2:",
+	"form-edit-line2": "Linha3:",
+	"form-edit-line3": "Linha4:",
+
+	"form-copy-title": "SignEdit > Copiar",
+	"form-copy-input-text": "Você copiará o sinal.%nPor favor insira um título da placa.",
+	"form-copy-input-placeholder": "Palavra chave",
+	"form-copy-label-text": "O título ja foi usado. Por favor, insira outro",
+
+	"form-paste-title": "SignEdit > Colar",
+	"form-paste-content": "Por favor selecione",
+
+	"form-remove-title": "SignEdit > Remover um dado",
+	"form-remove-content": "Por favor selecione um dado de copiado.",
+
+	"form-clear-title": "SignEdit > Apagar letras",
+	"form-clear-content": "Você realmente quer deixar em branco?",
+	"form-clear-button1": "Sim",
+	"form-clear-button2": "Nao"
+}
