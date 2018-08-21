@@ -27,13 +27,13 @@ Please see a movie.
 Nope. EVERYONE CAN USE!!
 
 # Essential item
-only Feather (ID:288)
+Only Feather (ID:288)
 
 # Contact
-[...Twitter](https://twitter.com/10ripon_obs)
+[Twitter](https://twitter.com/o10ri3_)
 
 # Help me!
-This plugin support three languages, English, Japanese and Chinese.  
+This plugin supported five languages.  
 But i want other languages!!  
 If you can help me, please make and send me a json file of language by all means!
 
@@ -43,3 +43,10 @@ If you can help me, please make and send me a json file of language by all means
 
 * [HGHD-Developer](https://github.com/HGHD-Developer)  
   * Send this repository German language file
+  
+* [XuPaperCup](https://github.com/XuPaperCup)
+  * Remake language file, Chinese to zho.json and chs.json.
+  * Add new folder "./language".
+  
+* [llronaldoll](https://github.com/llronaldoll)
+  * Send this repository Portugues language file
