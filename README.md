@@ -27,7 +27,12 @@ Please see a movie.
 Nope. EVERYONE CAN USE!!
 
 # Essential item
-Only Feather (ID:288)
+We can change key item in "config.yml".  
+```
+# key item setting
+keyitem-id: 288 //item id
+keyitem-meta: 0 //item meta
+```
 
 # Contact
 [Twitter](https://twitter.com/o10ri3_)
