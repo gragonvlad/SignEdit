@@ -16,7 +16,6 @@ use SignEdit\lang\Language;
 class EventListener implements Listener
 {
 
-	const ITEM_FEATHER = 288;
 	const BLOCK_SIGN = [ 63, 68, 323 ];
 
 	public function __construct($owner)
@@ -44,8 +43,10 @@ class EventListener implements Listener
         $player->iTick = $tick;
 		$item = $event->getItem();
 		$block = $event->getBlock();
+		$id_meta = $item->getId().":".$item->getDamage();
+		$key_item = $this->getAPI()->getKeyItem();
 		if ($block->getId() == 0) return;
-		if ($item->getId() == self::ITEM_FEATHER) {
+		if ($id_meta === $key_item) {
 			if (in_array($block->getId(), self::BLOCK_SIGN)) {
 				$tile = $player->getLevel()->getTile($block);
 				if (!($tile instanceof Sign)) return;

@@ -214,6 +214,14 @@ class API
 	}
 
 
+	public function getKeyItem()
+	{
+		$id = $this->owner->getConfig()->get("keyitem-id");
+		$meta = $this->owner->getConfig()->get("keyitem-meta");
+		return $id.":".$meta;
+	}
+
+
 	public function getEncodedJson($data)
 	{
 		return json_encode($data, JSON_PRETTY_PRINT | JSON_BIGINT_AS_STRING | JSON_UNESCAPED_UNICODE);

@@ -1,11 +1,15 @@
-﻿# please select a language.
+﻿# select a language.
 
-# Japanese = jpn
-# English = eng
-# Chinese-Simplified = chs
-# German = deu
-# Chinese-Traditional = zho
-# Portugues- por
-
-
+# Japanese            => jpn
+# English             => eng
+# Chinese-Simplified  => chs
+# German              => deu
+# Chinese-Traditional => zho
+# Portugues           => por
 language: eng
+
+
+
+# key item setting
+keyitem-id: 288
+keyitem-meta: 0
