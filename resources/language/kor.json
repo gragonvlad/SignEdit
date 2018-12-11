@@ -1,0 +1,42 @@
+{
+	"language-name": "한국",
+	"language-selected": "{%0}를 현재 선택하고 있습니다",
+
+	"message-edit-completed": "간판의 편집이 완료되었습니다",
+	"message-copy-completed": "간판 복제가 완료되었습니다",
+	"message-copy-remove": "지정한 간판의 복제 데이터를 감추었습니다",
+	"message-paste-completed": "붙여 넣기가 완료되었습니다",
+	"message-paste-error": "간판의 사본이 하나도되어 있지 않습니다",
+	"message-clear-completed": "간판의 백지화가 완료되었습니다",
+	"message-clear-avoided": "간판의 백지화를 중단했습니다",
+
+	"form-select-title": "SignEdit",
+	"form-select-content": "수행 할 작업을 지정하십시오",
+	"form-select-button-edit": "간판의 문자를 편집합니다",
+	"form-select-button-copy": "간판 복사합니다",
+	"form-select-button-paste": "간판에 붙여 넣기합니다",
+	"form-select-button-clear": "간판을 백지화",
+	"form-select-button-remove": "저장된 데이터를 삭제합니다",
+
+	"form-edit-title": "SignEdit > 편집",
+	"form-edit-line0": "1 호선:",
+	"form-edit-line1": "2 호선:",
+	"form-edit-line2": "3 호선:",
+	"form-edit-line3": "4 호선:",
+
+	"form-copy-title": "SignEdit > 복사",
+	"form-copy-input-text": "그 간판의 문자를 복사합니다%n제목을 지정하고 저장하십시오",
+	"form-copy-input-placeholder": "알기 쉬운 키워드",
+	"form-copy-label-text": "그 제목은 이미 사용되고 있습니다. 다른 제목으로 변경하십시오",
+
+	"form-paste-title": "SignEdit > 붙여 넣기",
+	"form-paste-content": "페이스트의 문자를 선택하십시오",
+
+	"form-remove-title": "SignEdit > 저장된 데이터 삭제",
+	"form-remove-content": "삭제하는 문자를 선택하십시오",
+
+	"form-clear-title": "SignEdit > 백지화",
+	"form-clear-content": "정말 백지화 하시겠습니까?",
+	"form-clear-button1": "예",
+	"form-clear-button2": "아니오"
+}
