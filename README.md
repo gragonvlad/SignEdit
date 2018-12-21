@@ -43,6 +43,10 @@ But i want other languages!!
 If you can help me, please make and send me a json file of language by all means!
 
 # Special Thanks
+
+* [Xxawareness](https://github.com/Xxawareness)  
+  * Send this repository Korean language file
+
 * [WingLo](https://github.com/lowingly)  
   * Send this repository Chinese language file
 
