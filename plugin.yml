@@ -1,6 +1,6 @@
 name: SignEdit
 main: SignEdit\Main
 version: 1.4.1
-api: [3.0.0 , 3.5.2]
+api: [3.0.0]
 load: POSTWORLD
 author: OtorisanVardo
