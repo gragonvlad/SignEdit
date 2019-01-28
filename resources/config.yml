@@ -1,4 +1,4 @@
-﻿# select a language.
+# select a language.
 
 # Japanese            => jpn
 # English             => eng
@@ -6,6 +6,7 @@
 # German              => deu
 # Chinese-Traditional => zho
 # Portugues           => por
+# Korean              => kor
 language: eng
 
 
