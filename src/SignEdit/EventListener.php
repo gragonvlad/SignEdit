@@ -25,22 +25,9 @@ class EventListener implements Listener
 	}
 
 
-	public function onJoin(PlayerJoinEvent $event)
-	{
-		$player = $event->getPlayer();
-		$player->iTick = 0;
-	}
-
-
 	public function onTap(PlayerInteractEvent $event)
 	{
 		$player = $event->getPlayer();
-		$tick = $this->getServer()->getTick();
-        if ($tick - $player->iTick <= 3) {
-            $event->setCancelled();
-            return;
-        }
-        $player->iTick = $tick;
 		$item = $event->getItem();
 		$block = $event->getBlock();
 		$id_meta = $item->getId().":".$item->getDamage();
