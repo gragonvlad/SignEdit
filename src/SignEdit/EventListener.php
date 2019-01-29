@@ -37,9 +37,9 @@ class EventListener implements Listener
 			if (in_array($block->getId(), self::BLOCK_SIGN)) {
 				$tile = $player->getLevel()->getTile($block);
 				if (!($tile instanceof Sign)) return;
-				$player->signedit["object"] = $tile;
-				if (!isset($player->signedit["copydatas"])) {
-					$player->signedit["copydatas"] = [];
+				API::$signedit[$player->getName()]["object"] = $tile;
+				if (!isset(API::$signedit[$player->getName()]["copydatas"])) {
+					API::$signedit[$player->getName()]["copydatas"] = [];
 				}
 				$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 			}
@@ -72,7 +72,7 @@ class EventListener implements Listener
 				}
 
 				if ((int)$data == 2) {
-					if (empty($player->signedit["copydatas"])) {
+					if (empty(API::$signedit[$player->getName()]["copydatas"])) {
 						$player->sendMessage("§c> ".Language::translate("message-paste-error"));
 						return;
 					}
@@ -86,7 +86,7 @@ class EventListener implements Listener
 				}
 
 				if ((int)$data == 4) {
-					if (empty($player->signedit["copydatas"])) {
+					if (empty(API::$signedit[$player->getName()]["copydatas"])) {
 						$player->sendMessage("§c> ".Language::translate("message-paste-error"));
 						return;
 					}
@@ -104,7 +104,7 @@ class EventListener implements Listener
 				if (!is_array($data)) {
 					return;
 				}
-				$sign = $player->signedit["object"];
+				$sign = API::$signedit[$player->getName()]["object"];
 				foreach ($data as $key => $text) {
 					$sign->setLine($key, $text);
 				}
@@ -120,13 +120,13 @@ class EventListener implements Listener
 					return;
 				}
 				if ($data[0] === null) return;
-				$sign = $player->signedit["object"];
+				$sign = API::$signedit[$player->getName()]["object"];
 				$title = $data[0];
-				if (isset($player->signedit["copydatas"][$title])) {
+				if (isset(API::$signedit[$player->getName()]["copydatas"][$title])) {
 					$this->getAPI()->requestUI(API::FORM_TYPE_COPY_ERROR, $player);
 					return;
 				}
-				$player->signedit["copydatas"][$title] = $sign->getText();
+				API::$signedit[$player->getName()]["copydatas"][$title] = $sign->getText();
 				$player->sendMessage("§a> ".Language::translate("message-copy-completed"));
 				break;
 
@@ -136,10 +136,10 @@ class EventListener implements Listener
 					$this->getAPI()->requestUI(API::FORM_TYPE_SELECT, $player);
 					return;
 				}
-				if (!isset($player->signedit["copydatas"])) return;
-				$sign = $player->signedit["object"];
-				$key = array_keys($player->signedit["copydatas"])[$data];
-				$texts = $player->signedit["copydatas"][$key];
+				if (!isset(API::$signedit[$player->getName()]["copydatas"])) return;
+				$sign = API::$signedit[$player->getName()]["object"];
+				$key = array_keys(API::$signedit[$player->getName()]["copydatas"])[$data];
+				$texts = API::$signedit[$player->getName()]["copydatas"][$key];
 				$sign->setText($texts[0], $texts[1], $texts[2], $texts[3]);
 				$sign->saveNBT();
 				$player->sendMessage("§a> ".Language::translate("message-paste-completed"));
@@ -152,7 +152,7 @@ class EventListener implements Listener
 					return;
 				}
 				if ($data) {
-					$sign = $player->signedit["object"];
+					$sign = API::$signedit[$player->getName()]["object"];
 					$sign->setText("", "", "", "");
 					$sign->saveNBT();
 					$player->sendMessage("§a> ".Language::translate("message-clear-completed"));
@@ -168,8 +168,8 @@ class EventListener implements Listener
 					return;
 				}
 
-				$key = array_keys($player->signedit["copydatas"])[$data];
-				unset($player->signedit["copydatas"][$key]);
+				$key = array_keys(API::$signedit[$player->getName()]["copydatas"])[$data];
+				unset(API::$signedit[$player->getName()]["copydatas"][$key]);
 				$player->sendMessage("§a> ".Language::translate("message-copy-remove"));
 				break;
 		}

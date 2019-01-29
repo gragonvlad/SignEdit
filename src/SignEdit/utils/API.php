@@ -7,7 +7,6 @@ use SignEdit\lang\Language;
 
 class API
 {
-
 	const FORM_TYPE_SELECT = 1947;
 	const FORM_TYPE_EDIT = 1948;
 	const FORM_TYPE_COPY = 1949;
@@ -21,6 +20,9 @@ class API
 	const FORM_IMAGE_COPY = "https://i.imgur.com/vGXIZhS.png";
 	const FORM_IMAGE_INITIAL = "https://i.imgur.com/4hBz3Ij.png";
 	const FORM_IMAGE_DELPASTE = "https://i.imgur.com/n8W4leS.png";
+
+
+	public static $signedit=[];
 
 
 	public function __construct($owner)
@@ -112,7 +114,7 @@ class API
 
 	public function getEditFormJson($player)
 	{
-		$sign = $player->signedit["object"];
+		$sign = self::$signedit[$player->getName()]["object"];
 		$data = [];
 		$data["type"] = "custom_form";
 		$data["title"] = "§l".Language::translate("form-edit-title");
@@ -162,13 +164,13 @@ class API
 
 	public function getPasteFormJson($player)
 	{
-		if (empty($player->signedit["copydatas"])) return null;
+		if (empty(self::$signedit[$player->getName()]["copydatas"])) return null;
 		$data = [];
 		$data["type"] = "form";
 		$data["title"] = "§l".Language::translate("form-paste-title");
 		$data["content"] = Language::translate("form-paste-content");
 
-		foreach ($player->signedit["copydatas"] as $keyword => $copyed) {
+		foreach (self::$signedit[$player->getName()]["copydatas"] as $keyword => $copyed) {
 			$panels["text"] = "$keyword";
 			$panels["image"]["type"] = "url";
 			$panels["image"]["data"] = "";
@@ -182,13 +184,13 @@ class API
 
 	public function getDelPasteFormJson($player)
 	{
-		if (!isset($player->signedit["copydatas"])) return null;
+		if (!isset(self::$signedit[$player->getName()]["copydatas"])) return null;
 		$data = [];
 		$data["type"] = "form";
 		$data["title"] = "§l".Language::translate("form-remove-title");
 		$data["content"] = Language::translate("form-remove-content");
 
-		foreach ($player->signedit["copydatas"] as $keyword => $copyed) {
+		foreach (self::$signedit[$player->getName()]["copydatas"] as $keyword => $copyed) {
 			$panels["text"] = "$keyword";
 			$panels["image"]["type"] = "url";
 			$panels["image"]["data"] = "";
