@@ -2,17 +2,19 @@
 
 namespace SignEdit;
 
-use pocketmine\Player;
-use pocketmine\Server;
 use pocketmine\utils\Config;
 use pocketmine\plugin\PluginBase;
 
 use SignEdit\utils\API;
 use SignEdit\lang\Language;
-use SignEdit\EventListener;
 
 class Main extends PluginBase
 {
+
+    /** @var API */
+    private $api;
+    /** @var Config */
+    private $config;
 
     public function onEnable()
     {
@@ -20,21 +22,18 @@ class Main extends PluginBase
         $this->loadLanguage();
         $this->api = new API($this);
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        $this->getLogger()->info("author : OtorisanVardo");
-        $this->getLogger()->info("contact : https://github.com/OtorisanVardo/SignEdit");
-        $this->getLogger()->info("version : ".$this->getDescription()->getVersion());
+        $desc = $this->getDescription();
+        $this->getLogger()->info("author : {$desc->getAuthors()[0]}");
+        $this->getLogger()->info("contact : {$desc->getWebsite()}");
+        $this->getLogger()->info("version : {$desc->getVersion()}");
         $this->getLogger()->info("language: ".Language::translate("language-name"));
     }
-
 
     public function loadConfig()
     {
         $this->saveDefaultConfig();
-        $this->reloadConfig();
-        if(!file_exists($this->getDataFolder())) @mkdir($this->getDataFolder(), 0744, true);
         $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
     }
-
 
     public function loadLanguage()
     {
