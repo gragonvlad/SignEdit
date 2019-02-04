@@ -2,12 +2,11 @@
 
 namespace SignEdit;
 
+use pocketmine\block\BlockIds;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
-use pocketmine\item\Item;
 use pocketmine\tile\Sign;
 
 use SignEdit\utils\API;
@@ -16,12 +15,21 @@ use SignEdit\lang\Language;
 class EventListener implements Listener
 {
 
-	const BLOCK_SIGN = [ 63, 68, 323 ];
+    /** @var int[] */
+	public const BLOCK_SIGN = [
+        BlockIds::STANDING_SIGN,// 63
+        BlockIds::WALL_SIGN// 68
+    ];
 
-	public function __construct($owner)
+	/** @var Main */
+	private $owner;
+	/** @var API */
+	private $api;
+
+	public function __construct(Main $owner)
 	{
 		$this->owner = $owner;
-		$this->api = $this->owner->getAPI();
+		$this->api = $owner->getAPI();
 	}
 
 
@@ -32,7 +40,7 @@ class EventListener implements Listener
 		$block = $event->getBlock();
 		$id_meta = $item->getId().":".$item->getDamage();
 		$key_item = $this->getAPI()->getKeyItem();
-		if ($block->getId() == 0) return;
+		if ($block->getId() === 0) return;
 		if ($id_meta === $key_item) {
 			if (in_array($block->getId(), self::BLOCK_SIGN)) {
 				$tile = $player->getLevel()->getTile($block);
@@ -173,12 +181,6 @@ class EventListener implements Listener
 				$player->sendMessage("§a> ".Language::translate("message-copy-remove"));
 				break;
 		}
-	}
-
-
-	public function getServer()
-	{
-		return $this->owner->getServer();
 	}
 
 
