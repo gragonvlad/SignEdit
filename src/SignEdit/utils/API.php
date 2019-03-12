@@ -23,6 +23,7 @@ class API
 
 
 	public static $signedit=[];
+	public static $management=[];
 
 
 	public function __construct($owner)
@@ -36,7 +37,7 @@ class API
 		switch ($formId) {
 
 			case API::FORM_TYPE_SELECT:
-				$json = $this->getSelectFormJson();
+				$json = $this->getSelectFormJson($player);
 				break;
 
 			case API::FORM_TYPE_EDIT:
@@ -75,38 +76,42 @@ class API
 	}
 
 
-	public function getSelectFormJson()
+	public function getSelectFormJson($player)
 	{
 		$data = [];
 		$data["type"] = "form";
 		$data["title"] = "§l".Language::translate("form-select-title");
 		$data["content"] = Language::translate("form-select-content");
-
-		$replaceset["text"] = Language::translate("form-select-button-edit");
-		$replaceset["image"]["type"] = "url";
-		$replaceset["image"]["data"] = API::FORM_IMAGE_EDIT;
-		$data["buttons"][] = $replaceset;
-
-		$copy["text"] = Language::translate("form-select-button-copy");
-		$copy["image"]["type"] = "url";
-		$copy["image"]["data"] = API::FORM_IMAGE_COPY;
-		$data["buttons"][] = $copy;
-
-		$paste["text"] = Language::translate("form-select-button-paste");
-		$paste["image"]["type"] = "url";
-		$paste["image"]["data"] = API::FORM_IMAGE_PASTE;
-		$data["buttons"][] = $paste;
-
-		$clear["text"] = Language::translate("form-select-button-clear");
-		$clear["image"]["type"] = "url";
-		$clear["image"]["data"] = API::FORM_IMAGE_INITIAL;
-		$data["buttons"][] = $clear;
-
-		$rmPaste["text"] = Language::translate("form-select-button-remove");
-		$rmPaste["image"]["type"] = "url";
-		$rmPaste["image"]["data"] = API::FORM_IMAGE_DELPASTE;
-		$data["buttons"][] = $rmPaste;
-
+		if ($this->owner->getConfigData("manage-edit") == true || $player->isOp()) {
+			$replaceset["text"] = Language::translate("form-select-button-edit");
+			$replaceset["image"]["type"] = "url";
+			$replaceset["image"]["data"] = API::FORM_IMAGE_EDIT;
+			$data["buttons"][] = $replaceset;
+		}
+		if ($this->owner->getConfigData("manage-copy") == true || $player->isOp()) {
+			$copy["text"] = Language::translate("form-select-button-copy");
+			$copy["image"]["type"] = "url";
+			$copy["image"]["data"] = API::FORM_IMAGE_COPY;
+			$data["buttons"][] = $copy;
+		}
+		if ($this->owner->getConfigData("manage-paste") == true || $player->isOp()) {
+			$paste["text"] = Language::translate("form-select-button-paste");
+			$paste["image"]["type"] = "url";
+			$paste["image"]["data"] = API::FORM_IMAGE_PASTE;
+			$data["buttons"][] = $paste;
+		}
+		if ($this->owner->getConfigData("manage-initial") == true || $player->isOp()) {
+			$clear["text"] = Language::translate("form-select-button-clear");
+			$clear["image"]["type"] = "url";
+			$clear["image"]["data"] = API::FORM_IMAGE_INITIAL;
+			$data["buttons"][] = $clear;
+		}
+		if ($this->owner->getConfigData("manage-remove") == true || $player->isOp()) {
+			$rmPaste["text"] = Language::translate("form-select-button-remove");
+			$rmPaste["image"]["type"] = "url";
+			$rmPaste["image"]["data"] = API::FORM_IMAGE_DELPASTE;
+			$data["buttons"][] = $rmPaste;
+		}
 		$json = $this->getEncodedJson($data);
 		return $json;
 	}

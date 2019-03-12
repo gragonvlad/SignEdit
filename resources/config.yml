@@ -1,4 +1,4 @@
-# select a language.
+#Select a language you wanna use.
 
 # Japanese            => jpn
 # English             => eng
@@ -11,6 +11,23 @@ language: eng
 
 
 
-# key item setting
+#If you want to change key item, please fill in.
 keyitem-id: 288
 keyitem-meta: 0
+
+
+
+#Operation management
+#If you want to limit general players, please turn to "op" or "false".
+#"true" allows all players to use this system.
+
+#Limit the motion to edit the sign every line.
+manage-edit: true
+#Limit the motion to copy the sign.
+manage-copy: true
+#Limit the motion to paste the sign.
+manage-paste: true
+#Limit the motion to remove the sign data.
+manage-remove: true
+#Limit the motion to initial the sign.
+manage-initial: true
