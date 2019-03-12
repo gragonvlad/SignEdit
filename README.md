@@ -24,10 +24,26 @@ Please see a movie.
 [![Movie](https://img.youtube.com/vi/yOGeOJyXNvE/0.jpg)](https://youtu.be/yOGeOJyXNvE)
 
 # Permission
-Nope. EVERYONE CAN USE!!
+You can change permission in "config.yml".  
+```
+#Operation management
+#If you want to limit general players, please turn to "false".
+#"true" allows all players to use this system.
+
+#Limit the motion to edit the sign every line.
+manage-edit: true
+#Limit the motion to copy the sign.
+manage-copy: true
+#Limit the motion to paste the sign.
+manage-paste: true
+#Limit the motion to remove the sign data.
+manage-remove: true
+#Limit the motion to initial the sign.
+manage-initial: true
+```
 
 # Essential item
-We can change key item in "config.yml".  
+You can change key item in "config.yml".  
 ```
 # key item setting
 keyitem-id: 288 //item id
@@ -35,7 +51,7 @@ keyitem-meta: 0 //item meta
 ```
 
 # Contact
-[Twitter](https://twitter.com/o10ri3_)
+[~~Twitter~~](#)
 
 # Help me!
 This plugin supported five languages.  
