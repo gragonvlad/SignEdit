@@ -18,7 +18,7 @@ keyitem-meta: 0
 
 
 #Operation management
-#If you want to limit general players, please turn to "op" or "false".
+#If you want to limit general players, please turn to "false".
 #"true" allows all players to use this system.
 
 #Limit the motion to edit the sign every line.
