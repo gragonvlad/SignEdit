@@ -70,9 +70,13 @@ class API
 		}
 
 		$pk = new ModalFormRequestPacket();
-        $pk->formId = $formId;
-        $pk->formData = $json;
-        $player->dataPacket($pk);
+		$pk->formId = $formId;
+		$pk->formData = $json;
+
+		/** @depricated
+		 * $player->dataPacket($pk);
+		 */
+		$player->sendDataPacket($pk);
 	}
 
 
