@@ -7,7 +7,7 @@ Edit a sign for PocketMine-MP!!
 
 [![](https://poggit.pmmp.io/shield.dl/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
 [![](https://poggit.pmmp.io/shield.dl.total/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
-[![](https://poggit.pmmp.io/ci.shield/OtorisanVardo/SignEdit/SignEdit?style=flat-square)](https://poggit.pmmp.io/ci.shield/OtorisanVardo/SignEdit/SignEdit?style=flat-square)
+[![](https://poggit.pmmp.io/ci.shield/OtorisanVardo/SignEdit/SignEdit?style=flat-square)](https://poggit.pmmp.io/ci.shield/OtorisanVardo/SignEdit/SignEdit?style=flat)
 
 # At first
 Hey guys!  
