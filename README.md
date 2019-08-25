@@ -3,11 +3,14 @@
 Edit a sign for PocketMine-MP!!
 
 [![](https://poggit.pmmp.io/shield.state/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
-[![](https://poggit.pmmp.io/shield.api/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
+[![](https://poggit.pmmp.io/shield.api/SignEdit)](https://poggit.pmmp.io/p/SignEdit)  
 
 [![](https://poggit.pmmp.io/shield.dl/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
-[![](https://poggit.pmmp.io/shield.dl.total/SignEdit)](https://poggit.pmmp.io/p/SignEdit)
-[![](https://poggit.pmmp.io/ci.shield/OtorisanVardo/SignEdit/SignEdit?style=flat-square)](https://poggit.pmmp.io/ci.shield/OtorisanVardo/SignEdit/SignEdit?style=flat)
+[![](https://poggit.pmmp.io/shield.dl.total/SignEdit)](https://poggit.pmmp.io/p/SignEdit)  
+
+[![UIUC_NCSALicense](https://img.shields.io/badge/license-UIUC%2FNCSA-informational)](LICENSE)  
+
+[![PoggitCI Badge](https://poggit.pmmp.io/ci.badge/OtorisanVardo/SignEdit/SignEdit)](https://poggit.pmmp.io/ci/OtorisanVardo/SignEdit/SignEdit)
 
 # At first
 Hey guys!  
